@@ -178,7 +178,8 @@ function App() {
       <Header />
       <Tables data={data} />
       {/* <Signs /> */}
-      <Footer data={data[4]} />
+      {/* <Footer data={data[4]} /> */}
+      <Footer data={'Selamat Datang di Gudang PT WGI Semarang'} />
     </>
   )
 }

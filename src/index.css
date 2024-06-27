@@ -2,9 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  background-color: white;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color:  black;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +20,6 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  background-color: #1a1a1a;
   margin-bottom: 0%;
 }
 
@@ -29,7 +28,6 @@ body {
   color: #fff;
   justify-content: center;
   display: flex;
-  background-color: #1a1a1a;
   padding-left: 20px;
   margin-top: 0;
   align-items: center;
@@ -40,9 +38,9 @@ body {
   padding-left: 20px;
   padding-bottom: 20px;
   padding-right: 20px;
-  color: #fff;
+  color: black;
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: white;
 }
 
 /* Set a fixed width for each column */
