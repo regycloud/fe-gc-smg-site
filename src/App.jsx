@@ -5,6 +5,7 @@ import './App.css'
 import axios from "axios";
 import recycle from './assets/recycle.png';
 import signs from './assets/signs.png';
+import SingleTable from './SingleTable';
 
 
 const Table = ({ data, color }) => {
@@ -176,9 +177,10 @@ function App() {
   return (
     <>
       <Header />
-      <Tables data={data} />
+      {/* <Tables data={data} /> */}
       {/* <Signs /> */}
       {/* <Footer data={data[4]} /> */}
+      <SingleTable />
       <Footer data={'Selamat Datang di Gudang PT WGI Semarang'} />
     </>
   )
