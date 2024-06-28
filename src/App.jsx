@@ -7,6 +7,7 @@ import recycle from './assets/recycle.png';
 import signs from './assets/signs.png';
 import SingleTable from './SingleTable';
 
+const endPoint = "https://50d3-103-136-25-38.ngrok-free.app/req"
 
 const Table = ({ data, color }) => {
   return (
@@ -162,28 +163,41 @@ const Tables = ({data}) => {
 }
 
 function App() {
+  // const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   getData();
+  // },[])
+  
+  // const getData = async () => {
+  //   const response = await axios.get('https://524c-103-136-25-38.ngrok-free.app/req',  {headers: {
+  //     "ngrok-skip-browser-warning":"any"
+  //   },}     
+  //   );
+  //   setData(response.data)
+  // }
   const [data, setData] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     getData();
   },[])
   
   const getData = async () => {
-    const response = await axios.get('https://524c-103-136-25-38.ngrok-free.app/req',  {headers: {
+    const response = await axios.get(endPoint, {headers: {
       "ngrok-skip-browser-warning":"any"
-    },}     
-    );
+    },});
     setData(response.data)
+    setLoading(false);
   }
-
   return (
     <>
       <Header />
       {/* <Tables data={data} /> */}
       {/* <Signs /> */}
       {/* <Footer data={data[4]} /> */}
-      <SingleTable />
-      <Footer data={'Selamat Datang di Gudang PT WGI Semarang'} />
+      {isLoading ? (<p>Loading...</p>) : <SingleTable data={data}/>}
+      {isLoading ? (<p>Loading...</p>) : <Footer data={'Selamat Datang'} />}
     </>
   )
 }
