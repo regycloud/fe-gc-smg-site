@@ -45,13 +45,13 @@ const Time = () => {
   const [time, setTime] = useState(new Date());
   const formattedTime = time.toLocaleTimeString("en-US");
   return(
-    <>{formattedTime}</>
+    <a style={{color: 'white'}}>{formattedTime}</a>
   )
 }
 
 const Banner = ({title, flex, color}) => {
   return(
-    <h2 className='banner' style={{'flex':flex, 'backgroundColor':color}}>{title}</h2>
+    <div className='banner' style={{'flex':flex, 'backgroundColor':color, fontSize:'3vh', fontWeight:'bold'}}>{title}</div>
   )
 }
 
@@ -59,7 +59,9 @@ const ShowDate = () => {
   const today = new Date();
   return(
     <>
-    {today.toLocaleDateString('en-GB')}
+      <a style={{'color': 'white'}}>
+        {today.toLocaleDateString('en-GB')}
+        </a>
     </>
   )
 }

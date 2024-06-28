@@ -12,6 +12,7 @@
 }
 
 .custom-table th {
-  background-color: #f2f2f2;
+  background-color: yellow; /* Header background color */
   font-weight: bold;
+  text-align: center; /* Center align header text */
 }
