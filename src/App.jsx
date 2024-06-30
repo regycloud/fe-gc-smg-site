@@ -7,7 +7,7 @@ import recycle from './assets/recycle.png';
 import signs from './assets/signs.png';
 import SingleTable from './SingleTable';
 
-const endPoint = "https://50d3-103-136-25-38.ngrok-free.app/req"
+const endPoint = "https://e260-103-136-25-38.ngrok-free.app/req"
 
 const Table = ({ data, color }) => {
   return (
@@ -161,7 +161,6 @@ const Tables = ({data}) => {
     </>
   )
 }
-
 function App() {
   // const [data, setData] = useState([]);
 
@@ -178,7 +177,6 @@ function App() {
   // }
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
-
   useEffect(() => {
     getData();
   },[])
@@ -197,7 +195,7 @@ function App() {
       {/* <Signs /> */}
       {/* <Footer data={data[4]} /> */}
       {isLoading ? (<p>Loading...</p>) : <SingleTable data={data}/>}
-      {isLoading ? (<p>Loading...</p>) : <Footer data={'Selamat Datang'} />}
+      {isLoading ? (<p>Loading...</p>) : <Footer data={data[2][0]} />}
     </>
   )
 }
